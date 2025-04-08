@@ -1,10 +1,9 @@
 'use client'
-N
 import Image from "next/image";
 import { useState } from "react";
-import assets from "./assets/assets";
+import { assets } from "../assets/assets";
 import Navbar from "../components/Navbar";
-
+import Footer from "../components/Footer";
 
 const AddAddress = () => {
 

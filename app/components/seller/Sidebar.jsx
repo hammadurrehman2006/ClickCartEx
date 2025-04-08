@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { assets } from '../../../assets/assets';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { assets } from '@/app/assets/assets';
 
 const SideBar = () => {
     const pathname = usePathname()

@@ -1,10 +1,10 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { assets, orderDummyData } from "@/app/assets/assets";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
 import Footer from "@/app/components/seller/Footer";
 import Loading from "@/app/components/Loading";
+import { assets, orderDummyData } from "@/app/assets/assets";
 
 const Orders = () => {
 
