@@ -5,11 +5,10 @@ import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
 import { useClerk, UserButton } from "@clerk/nextjs";
 
-
 const Navbar = () => {
 
   const { isSeller, router, user } = useAppContext();
-  const {useSignIn} = useClerk();
+  const clerk = useClerk();
 
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700">
@@ -73,7 +72,7 @@ const Navbar = () => {
           </UserButton.MenuItems>
         </UserButton>
         </> : 
-        <button onClick={useSignIn} className="flex items-center gap-2 hover:text-gray-900 transition">
+        <button onClick={() => clerk.openSignIn()} className="flex items-center gap-2 hover:text-gray-900 transition">
           <Image src={assets.user_icon} alt="user icon" />
           Account
         </button>}
