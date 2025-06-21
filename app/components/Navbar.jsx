@@ -9,13 +9,15 @@ const Navbar = () => {
 
   const { isSeller, router, user } = useAppContext();
   const clerk = useClerk();
-
+  const handleNavigation = (path) => {
+    router.push(path);
+  };
   return (
     <>
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700">
       <Image
         className="cursor-pointer w-28 md:w-32"
-        onClick={() => router.push('/')}
+        onClick={() => handleNavigation('/')}
         src={assets.logo}
         alt="logo"
       />
@@ -33,7 +35,7 @@ const Navbar = () => {
           Contact
         </Link>
 
-        {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
+        {isSeller && <button onClick={() => handleNavigation('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
 
       </div>
 
@@ -42,10 +44,10 @@ const Navbar = () => {
         {user ? <>
         <UserButton>
           <UserButton.MenuItems>
-          <UserButton.Action label="Cart" labelIcon={<CartIcon/>} onClick={router.push("/cart")}/>
+          <UserButton.Action label="Cart" labelIcon={<CartIcon/>} onClick={handleNavigation("/cart")}/>
           </UserButton.MenuItems>
           <UserButton.MenuItems>
-          <UserButton.Action label="My Orders" labelIcon={<BagIcon/>} onClick={router.push("/my-orders")}/>
+          <UserButton.Action label="My Orders" labelIcon={<BagIcon/>} onClick={handleNavigation("/my-orders")}/>
           </UserButton.MenuItems>
         </UserButton>
         </> : 
@@ -56,20 +58,20 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center md:hidden gap-3">
-        {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
+        {isSeller && <button onClick={() => handleNavigation('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
         {user ? <>
         <UserButton>
           <UserButton.MenuItems>
-          <UserButton.Action label="Home" labelIcon={<HomeIcon/>} onClick={router.push("/")}/>
+          <UserButton.Action label="Home" labelIcon={<HomeIcon/>} onClick={handleNavigation("/")}/>
           </UserButton.MenuItems>
           <UserButton.MenuItems>
-          <UserButton.Action label="Product" labelIcon={<BoxIcon/>} onClick={router.push("/all=products")}/>
+          <UserButton.Action label="Product" labelIcon={<BoxIcon/>} onClick={handleNavigation("/all=products")}/>
           </UserButton.MenuItems>
           <UserButton.MenuItems>
-          <UserButton.Action label="Cart" labelIcon={<CartIcon/>} onClick={router.push("/cart")}/>
+          <UserButton.Action label="Cart" labelIcon={<CartIcon/>} onClick={handleNavigation("/cart")}/>
           </UserButton.MenuItems>
           <UserButton.MenuItems>
-          <UserButton.Action label="My Orders" labelIcon={<BagIcon/>} onClick={router.push("/my-orders")}/>
+          <UserButton.Action label="My Orders" labelIcon={<BagIcon/>} onClick={handleNavigation("/my-orders")}/>
           </UserButton.MenuItems>
         </UserButton>
         </> : 
