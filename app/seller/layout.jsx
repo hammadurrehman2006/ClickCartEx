@@ -1,7 +1,7 @@
 'use client'
-import Navbar from '@/app/cart/components/seller/Navbar'
-import Sidebar from '@/app/cart/components/seller/Sidebar'
-import React from 'react'
+import Navbar from '@/app/components/seller/Navbar'
+import Sidebar from '@/app/components/seller/Sidebar'
+
 
 const Layout = ({ children }) => {
   return (
