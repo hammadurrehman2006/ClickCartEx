@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import { assets } from "../assets/assets";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../cart/components/Navbar";
+import Footer from "../cart/components/Footer";
 import { useAppContext } from "@/context/AppContext";
 import axios from "axios";
 import toast from "react-hot-toast";

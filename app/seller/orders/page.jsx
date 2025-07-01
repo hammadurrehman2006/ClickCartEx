@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
-import Footer from "@/app/components/seller/Footer";
-import Loading from "@/app/components/Loading";
+import Footer from "@/app/cart/components/seller/Footer";
+import Loading from "@/app/cart/components/Loading";
 import { assets, orderDummyData } from "@/app/assets/assets";
 
 const Orders = () => {

@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { assets, orderDummyData } from "@/app/assets/assets";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
-import Loading from "@/app/components/Loading";
+import Footer from "@/app/cart/components/Footer";
+import Navbar from "@/app/cart/components/Navbar";
+import Loading from "@/app/cart/components/Loading";
 
 const MyOrders = () => {
 
