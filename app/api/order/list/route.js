@@ -1,4 +1,4 @@
-import connectDb from "@/app/lib/connectDb"
+import connectDb from "@/config/db"
 import Address from "@/models/Address"
 import Product from "@/models/Product"
 import { getAuth } from "@clerk/nextjs/server"

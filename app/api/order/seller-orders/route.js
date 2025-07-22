@@ -1,7 +1,7 @@
+import connectDb from "@/config/db"
 import authSeller from "@/lib/authSeller"
 import { getAuth } from "@clerk/nextjs/server"
 import { NextResponse } from "next/server"
-import connectDb from "@/app/lib/connectDb"
 
 export async function GET(request) {
     try {
