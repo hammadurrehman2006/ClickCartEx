@@ -20,7 +20,7 @@ export const AppContextProvider = (props) => {
 
     const [products, setProducts] = useState([])
     const [userData, setUserData] = useState(false)
-    const [isSeller, setIsSeller] = useState(true)
+    const [isSeller, setIsSeller] = useState(false)
     const [cartItems, setCartItems] = useState({})
     const { user } = useUser();
     const { getToken } = useAuth()
@@ -54,7 +54,9 @@ export const AppContextProvider = (props) => {
                 setCartItems(data.user.cartItems)
             }
             else {
-                toast.error(data.message)
+                // toast.error(data.message)
+                console.log(data.message)
+            
             }
             // setUserData(userDummyData)
         }

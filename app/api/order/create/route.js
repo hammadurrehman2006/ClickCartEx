@@ -12,7 +12,7 @@ try {
     }
     const amount = await items.reduce(async (acc, item) => {
         const product = await Product.findbyId(item.product)
-        return  acc + product.offerPrice * item.quantity
+        return await  acc + product.offerPrice * item.quantity
     }, 0)
 
     await inngest.send({

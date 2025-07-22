@@ -1,13 +1,14 @@
 import React from "react";
 import { assets } from "@/app/assets/assets";
 import Image from "next/image";
+import ccex from "@/app/assets/ccex.png";
 
 const Footer = () => {
   return (
     <footer>
       <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-16 lg:px-32 gap-10 py-14 border-b border-gray-500/30 text-gray-500">
         <div className="w-4/5">
-          <Image className="w-28 md:w-32" src={assets.logo} alt="logo" />
+          <Image className="w-40 md:w-44" src={ccex} alt="logo" />
           <p className="mt-6 text-sm">
           Welcome to ClickCart Express, your go-to online destination where finding exactly what you need is always fast and easy. We're all about bringing a vast selection of products right to your fingertips, ensuring a seamless shopping experience from the moment you click to the speedy delivery at your door.
           </p>
